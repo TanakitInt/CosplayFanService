@@ -88,23 +88,23 @@ def imageManage():
             colorSelection = input("Select a COLOR for a text (1-5) : ")
             
             if colorSelection == "1":
-                color = (0, 0, 0)
+                color = (0, 0, 0) #Black
                 return color
 
             elif colorSelection == "2":
-                color = (211, 47, 47)
+                color = (211, 47, 47) #Red
                 return color
 
             elif colorSelection == "3":
-                color = (48, 63, 159)
+                color = (48, 63, 159) #Blue
                 return color
 
             elif colorSelection == "4":
-                color = (240, 98, 146)
+                color = (240, 98, 146) #Pink
                 return color
 
             elif colorSelection == "5":
-                color = (102, 187, 106)
+                color = (102, 187, 106) #Green
                 return color
 
             else:
@@ -115,32 +115,41 @@ def imageManage():
         #user propmt file selection
         while True:
             drawSelection = input("Picture to PROCESS (1-3) : ")
+            selection = [] 
+            #[picture number, x coordiniation, y coordiniation]
 
             if drawSelection == "1":
-                selection = 1
+                selection = [1, 250, 250]
+                
                 return selection
 
             elif drawSelection == "2":
-                selection = 2
+                selection = [2, 500, 500]
+                
                 return selection
 
             elif drawSelection == "3":
-                selection = 3
+                selection = [3, 1000, 1000]
                 return selection
 
             else:
                 inputErrorMessage()
 
+    def completeNotify():
+        print("Done!")
+        print("Your Fanservice is now completed, please see at the \"output\" folder!")
+        print("...")
+
     def process(selection, font, color):
         #image processing
 
-        if selection == 1:
+        if selection[0] == 1:
             image = "1_placeholder.jpg"
 
-        elif selection == 2:
+        elif selection[0] == 2:
             image = "2_placeholder.jpg" 
 
-        elif selection == 3:
+        elif selection[0] == 3:
             image = "3_placeholder.jpg" 
 
         imageIn = Image.open(image)
@@ -149,7 +158,8 @@ def imageManage():
         #text input
         userText = str(input("Your name : "))
 
-        drawIn.text((0, 0), userText, color, font = font)
+        #draw on picture
+        drawIn.text((selection[1], selection[2]), userText, color, font = font)
 
         #create output folder
         if not os.path.exists("output"):
@@ -157,6 +167,8 @@ def imageManage():
 
         imageIn.save("output/Your fan service here.jpg")
 
+        #Notify user the process was completed
+        completeNotify()
 
     def selectionTransfer():
         #transfer a variable
@@ -173,12 +185,9 @@ def imageManage():
 def credits():
     #creator credits
 
-    print(
-        """
-    blah blah blah credits here.
-        """
-        )
-
+    creditsFile = open('Credits.txt', 'r')
+    print(creditsFile.read())
+    creditsFile.close()
 
 def exit():
     #edit program
@@ -201,6 +210,7 @@ Menu :
 """
     )
     while True:
+        print("For help, type : \"help\"")
         menuSelection = input("Menu selection : ")
 
         if menuSelection == "1":
@@ -214,5 +224,11 @@ Menu :
 
         elif menuSelection == "9":
             exit()
+
+        elif menuSelection == "help":
+            menu()
+
+        else:
+            inputErrorMessage()
 
 menu()
