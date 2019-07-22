@@ -45,7 +45,7 @@ def imageManage():
         #font selection
         print(
 """
-(1) New Tanakit-kun *[My hand write]* 
+(1) New Tanakitkun *[My hand write]* 
 (2) Inkfree
 (3) Roboto Light
 (4) Segoe UI Light
@@ -55,7 +55,7 @@ def imageManage():
             fontSelection = input("Select a FONT to draw on (1-4) : ")
 
             if fontSelection == "1":
-                font = ImageFont.truetype(r'font/New_Tanakit-kun.ttf', 72)
+                font = ImageFont.truetype(r'font/New_Tanakitkun.ttf', 72)
                 return font
 
             elif fontSelection == "2":
@@ -130,6 +130,7 @@ def imageManage():
 
             elif drawSelection == "3":
                 selection = [3, 1000, 1000]
+
                 return selection
 
             else:
@@ -137,7 +138,7 @@ def imageManage():
 
     def completeNotify():
         print("Done!")
-        print("Your Fanservice is now completed, please see at the \"output\" folder!")
+        print("Your Fan Service is now completed, please see at the \"output\" folder!")
         print("...")
 
     def process(selection, font, color):
@@ -192,11 +193,17 @@ def credits():
 def exit():
     #edit program
 
-    print("Press any key to quit..." '\n')
+    print("Press ENTER key to quit..." '\n')
 
     userExit = input()
 
     quit()
+
+def introduction():
+    #intro to the program
+    introFile = open('Introduction.txt', 'r')
+    print(introFile.read())
+    introFile.close()
 
 def menu():
     #main menu
@@ -231,4 +238,5 @@ Menu :
         else:
             inputErrorMessage()
 
+introduction()
 menu()

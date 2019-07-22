@@ -1,6 +1,7 @@
-Cosplay Fan service.
+*-----------------------------------------------*
+Cosplay Fan Service.
 
-Cosplay Fan service generator.
+Cosplay Fan Service generator.
 (c) TanakitInt 2019.
 
 All photos belong to the respective photographer.
@@ -11,3 +12,4 @@ Coder : TanakitInt
 
 Available for commerial use via contact :
 imTanakit@gmail.com
+*-----------------------------------------------*
