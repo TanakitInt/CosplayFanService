@@ -6,6 +6,7 @@ Cosplay Fan Service generator.
 
 All photos belong to the respective photographer.
 
+Cosplayer : TanakitInt
 Photographer : TanakitInt
 Coder : TanakitInt
 [New Tanakit-kun] Font credits : TanakitInt
