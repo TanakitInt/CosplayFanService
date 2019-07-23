@@ -2,13 +2,14 @@
 
 <b>Cosplay Fan Service generator</b>  
 
-Custom your FS on your demand (TM) 
+Custom your FS on your demand (TM)  
 
-(c) TanakitInt 2019. 
+(c) TanakitInt 2019.  
 
-<b>Cosplay Social Media</b>   
-Instagram : @tanakit.cosplay  
-Worldcosplay : worldcosplay.net/member/706246  
+<b>Cosplay Social Media</b>  
+Instagram : https://www.instagram.com/tanakit.cosplay/  
+Worldcosplay : https://worldcosplay.net/member/706246/  
+Reddit : https://reddit.com/user/Humaniz5/  
 
 All photos belong to the respective photographer.
 

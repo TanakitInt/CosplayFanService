@@ -9,7 +9,7 @@ All photos belong to the respective photographer.
 Cosplayer : TanakitInt
 Photographer : TanakitInt
 Coder : TanakitInt
-[New Tanakit-kun] Font credits : TanakitInt
+[New Tanakitkun] Font credits : TanakitInt
 
 Available for commerial use via contact :
 imTanakit@gmail.com
