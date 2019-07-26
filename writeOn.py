@@ -1,8 +1,11 @@
 import os
+import time
 
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
+
+from datetime import datetime
 
 def inputErrorMessage():
     #print an error message
@@ -159,8 +162,14 @@ def imageManage():
         #text input
         userText = str(input("Your name : "))
 
+        #current date
+        date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')        
+
         #draw on picture
         drawIn.text((selection[1], selection[2]), userText, color, font = font)
+
+        #draw a Timestamp (Fixed Settings)
+        drawIn.text((10, 10), str(date), (255, 255, 255), font = ImageFont.truetype(r'font/segoeuil.ttf', 36)) #white
 
         #create output folder
         if not os.path.exists("output"):
