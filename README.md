@@ -7,6 +7,7 @@ Custom your FS on your demand (TM)
 (c) TanakitInt 2019.  
 
 <b>Cosplay Social Media</b>  
+Twitter : https://twitter.com/TanakitInt/  
 Instagram : https://www.instagram.com/tanakit.cosplay/  
 Worldcosplay : https://worldcosplay.net/member/706246/  
 Reddit : https://reddit.com/user/Humaniz5/  
