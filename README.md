@@ -24,7 +24,7 @@ https://www.python.org/downloads/
 
 For first time install : 
 1. VERIFY python version! (Must be ver. 3 only) 
-2. INSTALL "Pillow" module first (The code was embedded in "Fan Service.cmd") at wait patiently.
+2. INSTALL "Pillow" module first (The code was embedded in "Fan Service.cmd") and wait patiently.
 
 >pip install Pillow  
 >py -3 writeOn.py
