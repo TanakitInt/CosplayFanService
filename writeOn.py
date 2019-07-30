@@ -51,6 +51,8 @@ def imageManage():
         #font selection
         print(
 """
+Please select a font.
+
 (1) New Tanakitkun *[My hand write]* 
 (2) Inkfree
 (3) Roboto Light
@@ -83,6 +85,8 @@ def imageManage():
         #color selection
         print(
 """
+Please select a color.
+
 (1) Night Black *[Recommended]*
 (2) Material Red
 (3) Material Blue
@@ -149,6 +153,7 @@ def imageManage():
 
     def completeNotify():
         print("Done!")
+        print("")
         print("Your Fan Service is now completed, please see at the \"output\" folder!")
         print("...")
 
@@ -234,6 +239,7 @@ def menu():
     print(
 """
 Menu :
+
 (1) Preview file
 (2) Start processing
 (3) Credits
