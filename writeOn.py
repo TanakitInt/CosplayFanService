@@ -25,16 +25,19 @@ To Cancel please type "9"
     )
 
     while True:
-        viewSelection = input("Picture to PREVIEW (1-3): ")
+        viewSelection = input("Picture to PREVIEW (1-4): ")
 
         if viewSelection == "1":
-            os.startfile("1_placeholder.jpg")
+            os.startfile("1.jpg")
 
         elif viewSelection == "2":
-            os.startfile("2_placeholder.jpg")
+            os.startfile("2.jpg")
 
         elif viewSelection == "3":
-            os.startfile("3_placeholder.jpg")
+            os.startfile("3.jpg")
+
+        elif viewSelection == "4":
+            os.startfile("4.jpg")
 
         elif viewSelection == "9":
             menu()
@@ -117,22 +120,27 @@ def imageManage():
     def imageSelect():
         #user propmt file selection
         while True:
-            drawSelection = input("Picture to PROCESS (1-3) : ")
+            drawSelection = input("Picture to PROCESS (1-4) : ")
             selection = [] 
             #[picture number, x coordiniation, y coordiniation]
 
             if drawSelection == "1":
-                selection = [1, 250, 250]
+                selection = [1, 900, 925]
                 
                 return selection
 
             elif drawSelection == "2":
-                selection = [2, 500, 500]
+                selection = [2, 1475, 1850]
                 
                 return selection
 
             elif drawSelection == "3":
-                selection = [3, 1000, 1000]
+                selection = [3, 960, 875]
+
+                return selection
+
+            elif drawSelection == "4":
+                selection = [4, 1140, 1250]
 
                 return selection
 
@@ -148,13 +156,16 @@ def imageManage():
         #image processing
 
         if selection[0] == 1:
-            image = "1_placeholder.jpg"
+            image = "1.jpg"
 
         elif selection[0] == 2:
-            image = "2_placeholder.jpg" 
+            image = "2.jpg" 
 
         elif selection[0] == 3:
-            image = "3_placeholder.jpg" 
+            image = "3.jpg" 
+
+        elif selection[0] == 4:
+            image = "4.jpg"
 
         imageIn = Image.open(image)
         drawIn = ImageDraw.Draw(imageIn)
@@ -163,13 +174,17 @@ def imageManage():
         userText = str(input("Your name : "))
 
         #current date
-        date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')        
+        stamp = ""
+        date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        renderText = "Render on : "
+
+        stamp = renderText + date
 
         #draw on picture
         drawIn.text((selection[1], selection[2]), userText, color, font = font)
 
         #draw a Timestamp (Fixed Settings)
-        drawIn.text((10, 10), str(date), (255, 255, 255), font = ImageFont.truetype(r'font/segoeuil.ttf', 36)) #white
+        drawIn.text((10, 10), str(stamp), (255, 255, 255), font = ImageFont.truetype(r'font/segoeuil.ttf', 36)) #white
 
         #create output folder
         if not os.path.exists("output"):
