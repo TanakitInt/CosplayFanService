@@ -30,4 +30,6 @@ For first time install :
 >py -3 writeOn.py
 
 Available for commerial use via contact :  
-<i>imTanakit[AT]gmail.com</i>
+<i>imTanakit[AT]gmail.com</i>  
+
+Made with 💗 by TanakitInt.
